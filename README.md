@@ -32,3 +32,5 @@ No framework or installation required.
 
 ---
 Made with curiosity ♡
+
+Kiểm tra kết nối GitHub thành công.
