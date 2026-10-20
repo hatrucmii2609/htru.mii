@@ -3,61 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio cá nhân của Htru Mii.">
-  <title>Htru Mii | Portfolio</title>
+  <meta name="theme-color" content="#edf6ff">
+  <meta name="description" content="Góc nhỏ của Htru Mii: những điều mình yêu thích, đang học và tạo ra.">
+  <title>Htru Mii | A little blue corner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
+  <div class="background-orb orb-one" aria-hidden="true"></div>
+  <div class="background-orb orb-two" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a class="logo" href="#home">htru.mii<span>✳</span></a>
-    <nav aria-label="Điều hướng chính">
-      <a href="#about">About</a>
+    <a class="logo" href="#home" aria-label="Htru Mii, về đầu trang">htru<span>.mii</span><b>✳</b></a>
+    <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Điều hướng chính">
+      <a href="#about">About me</a>
+      <a href="#interests">Little things</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-contact" href="#contact">Say hello <span>↗</span></a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <p class="eyebrow">PERSONAL PORTFOLIO · 2026</p>
-      <h1>Hi, I'm <span>Htru Mii.</span></h1>
-      <p class="intro">A little corner of the internet where I collect what I create, learn, and love.</p>
-      <a class="button" href="#projects">Explore my work ↗</a>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> A LITTLE SPACE ON THE INTERNET</p>
+        <h1>Hi, I'm<br><span class="name-highlight">Htru Mii</span><span class="period">.</span></h1>
+        <p class="hero-text">A student, a curious mind, and a work in progress. I'm collecting little ideas, learning new things, and turning some of them into something real.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#about">Get to know me <span>↓</span></a>
+          <a class="text-link" href="#projects">Explore my space <span>↗</span></a>
+        </div>
+        <div class="hero-note"><span class="note-star">✳</span><span>made slowly, with a little curiosity</span></div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Decorative blue illustration">
+        <div class="art-card">
+          <div class="art-topline"><span>PERSONAL FILE</span><span>001 / MII</span></div>
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <div class="monogram">m<span>i</span></div>
+          <span class="spark spark-a">✦</span>
+          <span class="spark spark-b">✳</span>
+          <span class="spark spark-c">✧</span>
+          <div class="art-caption"><span class="caption-line"></span><span>currently becoming</span></div>
+        </div>
+        <div class="floating-chip chip-top">✿ curious by nature</div>
+        <div class="floating-chip chip-bottom"><span class="tiny-dot"></span> learning as I go</div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Cuộn xuống"><span></span> SCROLL TO EXPLORE</a>
     </section>
 
-    <section class="section" id="about">
-      <p class="eyebrow">01 / ABOUT</p>
-      <h2>A little about me</h2>
-      <p>Hi! I'm building my skills one project at a time. This portfolio is a home for my experiments, ideas, and things I'm proud to make.</p>
-      <div class="tags"><span>Learning</span><span>Design</span><span>Web development</span></div>
+    <section class="section about-section" id="about">
+      <div class="section-label reveal"><span>01</span> THE PERSON BEHIND THE PAGE</div>
+      <div class="about-layout">
+        <div class="about-heading reveal"><h2>A little about<br>the <span>human</span> here.</h2></div>
+        <div class="about-copy reveal">
+          <p class="large-copy">I'm still figuring things out, and I think that's part of the fun.</p>
+          <p>This is my small corner to keep track of what I'm learning, the ideas I want to try, and the projects I slowly bring to life. I like thoughtful details, creative spaces, and making ordinary things feel a little more personal.</p>
+          <p>There's plenty more to add as I grow. For now, this page is a snapshot of where I am today.</p>
+          <div class="signature">nice to meet you <span>♡</span></div>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="projects">
-      <p class="eyebrow">02 / SELECTED WORK</p>
-      <h2>Things I've made</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <p class="project-number">PROJECT 01</p>
-          <h3>Coming soon</h3>
-          <p>My first project will live here. Stay tuned!</p>
+    <section class="section interests-section" id="interests">
+      <div class="section-label reveal"><span>02</span> THINGS THAT FEEL LIKE ME</div>
+      <div class="section-heading-row reveal">
+        <h2>My little <span>universe.</span></h2>
+        <p>Different interests, one curious brain.</p>
+      </div>
+      <div class="interest-grid">
+        <article class="interest-card interest-blue reveal">
+          <span class="interest-icon">⌘</span><span class="card-index">01 / CREATE</span>
+          <h3>Making things</h3><p>Building little web projects and learning how ideas become real.</p>
+          <span class="card-decoration deco-code">{ }</span>
         </article>
-        <article class="project-card">
-          <p class="project-number">PROJECT 02</p>
-          <h3>In progress</h3>
-          <p>A small idea, slowly turning into something real.</p>
+        <article class="interest-card interest-lilac reveal">
+          <span class="interest-icon">✎</span><span class="card-index">02 / EXPRESS</span>
+          <h3>Words & stories</h3><p>Collecting thoughts, playing with words, and finding stories in small details.</p>
+          <span class="card-decoration deco-quote">“ ”</span>
+        </article>
+        <article class="interest-card interest-sky reveal">
+          <span class="interest-icon">♫</span><span class="card-index">03 / FEEL</span>
+          <h3>Music on repeat</h3><p>A soundtrack for studying, daydreaming, and everything in between.</p>
+          <span class="card-decoration deco-note">♪</span>
         </article>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
-      <p class="eyebrow">03 / SAY HELLO</p>
-      <h2>Let's connect.</h2>
-      <p>Have a thought or want to see what I'm working on?</p>
-      <a href="https://github.com/hatrucmii2609" target="_blank" rel="noreferrer">Find me on GitHub ↗</a>
+    <section class="section projects-section" id="projects">
+      <div class="section-label reveal"><span>03</span> THINGS I'M BUILDING</div>
+      <div class="section-heading-row reveal">
+        <h2>Small steps, <span>real progress.</span></h2>
+        <p>This portfolio is the first page in the collection.</p>
+      </div>
+      <a class="project-feature reveal" href="https://github.com/hatrucmii2609/htru.mii" target="_blank" rel="noreferrer">
+        <div class="project-preview">
+          <div class="preview-window">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <div class="preview-content"><span class="preview-label">HELLO, WORLD!</span><div class="preview-big">htru<span>.mii</span></div><div class="preview-lines"><i></i><i></i><i></i></div><div class="preview-pill">personal website ↗</div></div>
+          </div>
+          <span class="preview-sticker">MY FIRST<br>WEB SPACE ✳</span>
+        </div>
+        <div class="project-info">
+          <div class="project-meta"><span>FEATURED PROJECT</span><span>2026</span></div>
+          <h3>My personal website</h3>
+          <p>A blue little home for my introduction, interests, and future experiments. Built with HTML, CSS, and JavaScript.</p>
+          <div class="project-footer"><div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><span class="project-arrow">↗</span></div>
+        </div>
+      </a>
+      <p class="future-note reveal"><span>✦</span> More projects will find their way here. One step at a time.</p>
+    </section>
+
+    <section class="contact-section reveal" id="contact">
+      <div class="contact-spark">✳</div>
+      <p class="eyebrow">THE NEXT CHAPTER STARTS HERE</p>
+      <h2>Let's make the internet<br><span>a little more personal.</span></h2>
+      <p>Thanks for stopping by my little corner. Come back anytime!</p>
+      <a class="button button-light" href="https://github.com/hatrucmii2609" target="_blank" rel="noreferrer">Find me on GitHub <span>↗</span></a>
+      <div class="contact-decoration decoration-left">✧</div><div class="contact-decoration decoration-right">✦</div>
     </section>
   </main>
 
-  <footer><span>© <span id="year"></span> Htru Mii</span><span>Made with curiosity ♡</span></footer>
+  <footer>
+    <a class="logo footer-logo" href="#home">htru<span>.mii</span><b>✳</b></a>
+    <span>© <span id="year"></span> Htru Mii · made with curiosity ♡</span>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+  </footer>
 </body>
 </html>
