@@ -218,3 +218,33 @@ footer { width: min(1040px, calc(100% - 48px)); margin: auto; padding: 16px 0 28
   footer { width: calc(100% - 36px); flex-wrap: wrap; }
   footer > span { order: 3; width: 100%; }
 }
+
+
+/* Sao bốn cánh rải nhẹ khắp trang */
+.four-star {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: var(--star-size, 13px);
+  height: var(--star-size, 13px);
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: var(--star-color, #f5a8c9);
+  clip-path: polygon(50% 0%, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0% 50%, 39% 38%);
+  opacity: .78;
+  pointer-events: none;
+  animation: star-drift var(--star-speed, 4s) ease-in-out infinite alternate,
+             star-twinkle 2.8s ease-in-out infinite;
+}
+.four-star.star-white { --star-color: #fff; filter: drop-shadow(0 1px 3px rgba(85, 130, 190, .22)); }
+.four-star.star-green { --star-color: #8bd6ae; }
+.four-star.star-pink { --star-color: #f4a8ce; }
+.four-star.star-yellow { --star-color: #f5d46f; }
+.four-star.star-interactive { position: fixed; z-index: 100; width: 12px; height: 12px; animation: star-pop .65s ease-out forwards; }
+@keyframes star-drift { from { transform: translate3d(0, -3px, 0) rotate(-8deg); } to { transform: translate3d(0, 5px, 0) rotate(10deg); } }
+@keyframes star-twinkle { 0%, 100% { opacity: .42; scale: .82; } 50% { opacity: .9; scale: 1.08; } }
+@keyframes star-pop { 0% { opacity: 1; scale: .5; } 65% { opacity: .95; scale: 1.35; } 100% { opacity: 0; scale: .2; transform: translate(var(--burst-x, 10px), var(--burst-y, -20px)) rotate(45deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .four-star { animation: none; }
+}
