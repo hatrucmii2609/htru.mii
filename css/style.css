@@ -220,6 +220,8 @@ footer { width: min(1040px, calc(100% - 48px)); margin: auto; padding: 16px 0 28
 }
 
 
+main, footer { position: relative; z-index: 1; }
+
 /* Sao bốn cánh rải nhẹ khắp trang */
 .four-star {
   position: absolute;
